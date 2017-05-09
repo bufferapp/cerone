@@ -1,8 +1,6 @@
 # This is based on the amazon_kclpy sample file in the Python KCL repository:
 # https://github.com/awslabs/amazon-kinesis-client-python
 
-from __future__ import print_function
-
 import sys
 import time
 
@@ -104,7 +102,8 @@ class RecordProcessor(processor.RecordProcessorBase):
                                      partition_key=partition_key,
                                      sequence_number=sequence_number)
         except Exception as e:
-            sys.stderr.write('Error processing the data.')
+            sys.stderr.write('Error processing the data. '
+                             'Exception was {e}\n'.format(e=e))
 
     def should_update_sequence(self, sequence_number, sub_sequence_number):
         """Determines whether a new larger sequence number is available.

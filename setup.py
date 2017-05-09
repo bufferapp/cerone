@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='cerone',
-    packages=[],
+    packages=['cerone'],
     version='0.1.0',
     description='Extensible consumer made for applications using Python KCL.',
     author='David Gasquez',
