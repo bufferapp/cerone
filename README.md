@@ -21,22 +21,12 @@ python setup.py install
 
 ## Requirements
 
-Cerone uses and communicates with the [Kinesis Client Library MultiLangDaemon](https://docs.aws.amazon.com/streams/latest/dev/developing-consumers-with-kcl.html#kinesis-record-processor-overview-kcl) interface. You can found the installation instructions in the [Amazon Kinesis Client Python repository](https://github.com/awslabs/amazon-kinesis-client-python#running-the-sample).
+Cerone uses and communicates with the [Kinesis Client Library MultiLangDaemon](https://docs.aws.amazon.com/streams/latest/dev/developing-consumers-with-kcl.html#kinesis-record-processor-overview-kcl) interface. You can found the installation instructions in the [Amazon Kinesis Client Python repository](https://github.com/awslabs/amazon-kinesis-client-python#running-the-sample). Alternatively, you can use our `bufferapp/cerone-consumer` Docker image as shown in the [example folder](/example).
 
 ## Usage
 
-Once you've defined the function you want to apply to the stream records, you can call Cerone's `process_stream`:
+Once you've defined the function you want to apply to the stream records, you can call Cerone's `process_stream`. The [example `main.py` code](/example/main.py) shows a basic processing  (_saving stream data to a file_) being applied to a stream.
 
-```python
-from cerone import process_stream
+---
 
-
-def your_processing_function(record):
-    with open('file.json', 'w') as f:
-        f.write("{}\n".format(record))
-
-
-if __name__ == "__main__":
-    process_stream(your_processing_function)
-
-```
+Feel free to file an issue for any kind of feedback or bug!
