@@ -15,7 +15,7 @@ RUN apt-get update -y && \
 
 RUN pip install git+https://github.com/bufferapp/cerone
 
-COPY entrypoint.sh /app/entrypoint.sh
+COPY entrypoint.sh /opt/entrypoint.sh
 WORKDIR /app
 
-CMD ["bash", "entrypoint.sh"]
+CMD ["bash", "/opt/entrypoint.sh"]
