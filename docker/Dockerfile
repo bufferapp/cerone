@@ -13,7 +13,7 @@ RUN apt-get update -y && \
         ca-certificates-java="$CA_CERTIFICATES_JAVA_VERSION" \
         && rm -rf /var/lib/apt/lists/*
 
-RUN pip install git+https://github.com/bufferapp/cerone
+RUN pip install git+https://github.com/bufferapp/cerone#ca9baee34507d74b388e5d054ce83bad564e9d81
 
 COPY entrypoint.sh /opt/entrypoint.sh
 WORKDIR /app

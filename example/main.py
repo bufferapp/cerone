@@ -7,7 +7,7 @@ from cerone import process_stream
 def your_processing_function(data, partition_key=None, sequence_number=None):
     """Write the data to a file."""
     with open('data.json', 'a') as f:
-        f.write("{}\n".format(json.dumps(data)))
+        f.write("{}\n".format(json.dumps(data.decode("utf-8"))))
 
 
 if __name__ == "__main__":
