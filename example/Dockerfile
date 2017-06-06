@@ -1,4 +1,4 @@
-FROM bufferapp/cerone-consumer:0.1.0
+FROM bufferapp/cerone-consumer:0.1.1
 
 COPY requirements.txt /tmp
 RUN pip install -r /tmp/requirements.txt

@@ -1,4 +1,4 @@
-NAME := bufferapp/cerone-consumer:0.1.0
+NAME := bufferapp/cerone-consumer:0.1.1
 
 .PHONY: all
 all: run

@@ -3,7 +3,6 @@
 
 import sys
 import time
-import base64
 
 from amazon_kclpy import kcl
 from amazon_kclpy.v2 import processor
@@ -99,7 +98,6 @@ class RecordProcessor(processor.RecordProcessorBase):
             the sub sequence number associated with this record.
         """
         try:
-            data = base64.b64decode(data)
             self.processing_function(data,
                                      partition_key=partition_key,
                                      sequence_number=sequence_number)
