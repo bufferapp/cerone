@@ -15,7 +15,7 @@ The Docker image will need two files in `/app`:
 
 ## Usage
 
-You can add `requirements.txt` as shown in this example. Once you've coded your function, build a Docker image using `bufferapp/cerone-consumer:0.1.0` as the base. In our case:
+You can add `requirements.txt` as shown in this example. Once you've coded your function, build a Docker image using `bufferapp/cerone-consumer:0.1.1` as the base. In our case:
 
 ```bash
 docker build -t cerone-sample-consumer .
